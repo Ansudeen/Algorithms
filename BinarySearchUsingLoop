@@ -1,20 +1,22 @@
 #include <iostream>
 using namespace std;
 
-Bool search(int arr[], int n) {
+bool search(int arr[],int first,int last, int key) {
 
-	int first = 0;int  mid = 2;
+	int mid=(first+last)/2;
+	cout<<mid<<endl;
+
 	while (first < mid) {
-		if (arr[mid] == 31)
+		if (arr[mid] == key)
 			return true;
 
-		if (arr[mid]>31) {
-			first = 0;
+		if (arr[mid]>key) {
+			first=0;
 			mid = mid - 1;
 		}
 		else {
 			first = mid + 1;
-			mid = 5;
+			mid=last;
 		}
 			
 	}
@@ -24,10 +26,11 @@ Bool search(int arr[], int n) {
 int main()
 {
 	int x[5] = { 1, 2, 3, 4, 5};
-	if (search(x, 5))
+	if (search(x,0,4,1))
 	{
 		cout << "key found" << endl;
 	}
 	else
-		cout << "key not found" << endl;
+		cout << "key not found!!!" << endl;
 }
+
