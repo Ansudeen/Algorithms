@@ -25,7 +25,7 @@ int main() {
             sum2+=arr[i];
         }
         cout<<abs(sum1 - sum2) <<endl;
-        delete [] arr; 
+        delete [] arr;
     }
 	//code
 	return 0;
